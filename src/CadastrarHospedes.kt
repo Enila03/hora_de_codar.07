@@ -2,7 +2,7 @@ class CadastrarHospedes {
 
     var nome : String = ""
     var nomeHospede : String = ""
-    var idadeHospedes : Int = 0
+    var idadeHospedes : String = ""
 
     var diaria : Int = 0
     var valor : Double = 0.0

@@ -23,6 +23,7 @@ fun inicio () {
         senha = readLine()!!.toInt()
     }
     println("Acesso liberado!")
+
     caso(hospede)
 }
 
@@ -77,25 +78,32 @@ fun cadastrarQuarto (hospede: CadastrarHospedes) {
 
 }
 
-fun cadastrarHospedes (hospede: CadastrarHospedes) {
+fun cadastrarHospedes(hospede: CadastrarHospedes) {
 
     hospede.nomeHospede = ""
-    hospede.idadeHospedes = 0
-    var stop : String = ""
+    hospede.idadeHospedes = ""
 
-    while (stop != "PARE") {
-        println("Informe o nome do hóspede:")
+    while (true) {
+        println("Informe o nome do hóspede (ou digite PARE para encerrar):")
         val addNome = readLine()!!.uppercase()
+
+        if (addNome == "PARE") {
+            break
+        }
+
         println("Informe a idade do hóspede:")
         val addIdade = readLine()!!.toInt()
 
-        if (addNome == "PARE") {
-            stop == "PARE"
-        } else {
-            hospede.nomeHospede += addNome + "\n"
-            //hospede.idadeHospedes += addIdade + "\n"
-        }
-
+        hospede.nomeHospede += addNome + "\n"
+        hospede.idadeHospedes += addIdade.toString() + "\n"
     }
+
+    println("\n--- Hóspedes cadastrados ---")
+    print(hospede.nomeHospede)
+
+    println("--- Idades cadastradas ---")
+    print(hospede.idadeHospedes)
+
+    caso(hospede)
 
 }
