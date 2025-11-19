@@ -2,12 +2,14 @@ class CadastrarHospedes {
 
     var nome : String = ""
     var nomeHospede : String = ""
-    var idadeHospedes : Int = 0
+    var idadeHospedes : String = ""
 
     var diaria : Int = 0
     var valor : Double = 0.0
     var quartoReserva : Int = 0
     var data : String = ""
+
+    var diaria02 : Double = 0.0
 
     companion object {
         val quartosOcupados = mutableSetOf<Int>()
@@ -38,7 +40,7 @@ class CadastrarHospedes {
         }
     }
 
-    fun mostrarQuartos() {
+    fun mostrarQuartos () {
         println("Status dos quartos:")
         for (i in 1..20) {
             if (quartosOcupados.contains(i)) {
@@ -48,4 +50,25 @@ class CadastrarHospedes {
             }
         }
     }
+
+    var meia = 0
+    var gratuidade = 0
+    fun idade (nome : String, _idade : Int) {
+
+
+
+        if (_idade <= 6){
+            println("${nome} cadastrado com sucesso. ${nome} possui gratuidade.")
+            gratuidade += 1
+        } else if (_idade >= 60) {
+            diaria02 += 50
+            println("${nome} cadastrado com sucesso. ${nome} paga meia.")
+            meia += 1
+        } else {
+            diaria02 += 100
+            println("${nome} cadastrado com sucesso.")
+        }
+
+    }
+
 }

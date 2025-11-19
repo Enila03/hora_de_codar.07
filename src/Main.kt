@@ -23,6 +23,7 @@ fun inicio () {
         senha = readLine()!!.toInt()
     }
     println("Acesso liberado!")
+
     caso(hospede)
 }
 
@@ -30,21 +31,21 @@ fun caso (hospede: CadastrarHospedes) {
 
     println("----- MENU LÓTUS HOTEL -----\n" +
             "Escolha uma opção\n" +
-            "1. Reserva\n" +
-            "2. Cadastrar Hóspedes\n" +
-            "3. \n" +
+            "1. Cadastro 01\n" +
+            "2. Cadastro 02\n" +
+            "3. Cadastro 03\n" +
             "4. Sair")
     var op = readLine()!!.toInt()
 
     when (op) {
-        1 -> cadastrarQuarto(hospede)
-        2 -> cadastrarHospedes(hospede)
+        1 -> cadastro01(hospede)
+        2 -> cadastro02(hospede)
         //3 -> c()
         //4 -> d()
     }
 }
 
-fun cadastrarQuarto (hospede: CadastrarHospedes) {
+fun cadastro01 (hospede: CadastrarHospedes) {
 
     println("Digite o nome do hóspede:")
     hospede.nomeHospede = readLine()!!.uppercase()
@@ -77,25 +78,39 @@ fun cadastrarQuarto (hospede: CadastrarHospedes) {
 
 }
 
-fun cadastrarHospedes (hospede: CadastrarHospedes) {
+fun cadastro02(hospede: CadastrarHospedes) {
 
     hospede.nomeHospede = ""
-    hospede.idadeHospedes = 0
-    var stop : String = ""
+    hospede.idadeHospedes = ""
 
-    while (stop != "PARE") {
-        println("Informe o nome do hóspede:")
+    while (true) {
+        println("Informe o nome do hóspede (ou digite PARE para encerrar):")
         val addNome = readLine()!!.uppercase()
+
+        if (addNome == "PARE") {
+            break
+        }
+
         println("Informe a idade do hóspede:")
         val addIdade = readLine()!!.toInt()
 
-        if (addNome == "PARE") {
-            stop == "PARE"
-        } else {
-            hospede.nomeHospede += addNome + "\n"
-            //hospede.idadeHospedes += addIdade + "\n"
-        }
+        //hospede.nomeHospede += addNome + "\n"
+        //hospede.idadeHospedes += addIdade.toString() + "\n"
+
+        hospede.idade(addNome, addIdade)
 
     }
+
+    /*println("\n--- Hóspedes cadastrados ---")
+    print(hospede.nomeHospede)
+
+    println("--- Idades cadastradas ---")
+    print(hospede.idadeHospedes)*/
+
+    println("O valor total das passagens ficou: R$ ${hospede.diaria02}" +
+            "\n${hospede.gratuidade} gratuidade(s);" +
+            "\n${hospede.meia} meia(s).")
+
+    caso(hospede)
 
 }
