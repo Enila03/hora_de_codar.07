@@ -31,21 +31,21 @@ fun caso (hospede: CadastrarHospedes) {
 
     println("----- MENU LÓTUS HOTEL -----\n" +
             "Escolha uma opção\n" +
-            "1. Cadastro 01\n" +
-            "2. Cadastro 02\n" +
-            "3. Cadastro 03\n" +
+            "1. Reserva\n" +
+            "2. Cadastrar Hóspedes\n" +
+            "3. \n" +
             "4. Sair")
     var op = readLine()!!.toInt()
 
     when (op) {
-        1 -> cadastro01(hospede)
-        2 -> cadastro02(hospede)
+        1 -> cadastrarQuarto(hospede)
+        2 -> cadastrarHospedes(hospede)
         //3 -> c()
         //4 -> d()
     }
 }
 
-fun cadastro01 (hospede: CadastrarHospedes) {
+fun cadastrarQuarto (hospede: CadastrarHospedes) {
 
     println("Digite o nome do hóspede:")
     hospede.nomeHospede = readLine()!!.uppercase()
@@ -78,7 +78,7 @@ fun cadastro01 (hospede: CadastrarHospedes) {
 
 }
 
-fun cadastro02(hospede: CadastrarHospedes) {
+fun cadastrarHospedes(hospede: CadastrarHospedes) {
 
     hospede.nomeHospede = ""
     hospede.idadeHospedes = ""
@@ -94,22 +94,15 @@ fun cadastro02(hospede: CadastrarHospedes) {
         println("Informe a idade do hóspede:")
         val addIdade = readLine()!!.toInt()
 
-        //hospede.nomeHospede += addNome + "\n"
-        //hospede.idadeHospedes += addIdade.toString() + "\n"
-
-        hospede.idade(addNome, addIdade)
-
+        hospede.nomeHospede += addNome + "\n"
+        hospede.idadeHospedes += addIdade.toString() + "\n"
     }
 
-    /*println("\n--- Hóspedes cadastrados ---")
+    println("\n--- Hóspedes cadastrados ---")
     print(hospede.nomeHospede)
 
     println("--- Idades cadastradas ---")
-    print(hospede.idadeHospedes)*/
-
-    println("O valor total das passagens ficou: R$ ${hospede.diaria02}" +
-            "\n${hospede.gratuidade} gratuidade(s);" +
-            "\n${hospede.meia} meia(s).")
+    print(hospede.idadeHospedes)
 
     caso(hospede)
 
