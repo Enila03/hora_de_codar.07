@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e991bca4-709f-4dc8-a939-fb6437588e4c" name="Changes" comment="second commit" />
+=======
+    <list default="true" id="e991bca4-709f-4dc8-a939-fb6437588e4c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CadastrarHospedes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CadastrarHospedes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
+    </list>
+>>>>>>> ca76f3d683f30b652986a99797c791fed315273d
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
@@ -26,6 +35,12 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Enila03/hora_de_codar.07.git&quot;,
     &quot;accountId&quot;: &quot;af348e56-4608-430f-b318-165a67c4daae&quot;
+=======
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Enila03/hora_de_codar.07.git&quot;,
+    &quot;accountId&quot;: &quot;aeb63b36-821c-48ff-a84b-843d4a9e5bdf&quot;
+>>>>>>> ca76f3d683f30b652986a99797c791fed315273d
   }
 }</component>
   <component name="ProjectColorInfo">{
